@@ -8,11 +8,13 @@ AstroObjectAnalyser
 .. image:: https://travis-ci.org/sibirrer/astroObjectAnalyser.png?branch=master
     :target: https://travis-ci.org/sibirrer/astroObjectAnalyser
 
-Software package to deal with astronomy data to perform measurements on astronomical objects
+Software package to deal with astronomy data to perform measurements on astronomical objects build by sibirrer
 
 
-Features
+requeriments (found so far)
 --------
 
-* TODO
+* https://github.com/sibirrer/pyextractor
+* https://github.com/sibirrer/astrofunc
+* https://github.com/cosmo-ethz/CosmoHammer
 
