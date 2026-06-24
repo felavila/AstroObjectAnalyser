@@ -110,6 +110,7 @@ class ImageData(object):
         :return: mean and rms value of background
         """
         HDUFile = self.HDUFile()
+        print(HDUFile)
         mean, rms = self.catalogue.get_background(HDUFile)
         return mean, rms
 
@@ -119,6 +120,7 @@ class ImageData(object):
         :return: sextractor catalogue
         """
         HDUFile = self.HDUFile()
+        print(HDUFile)
         cat = self.catalogue.get_source_cat(HDUFile)
         return cat
 

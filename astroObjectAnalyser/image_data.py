@@ -202,6 +202,7 @@ class StrongLensImageData(object):
         :return: sextractor catalogue
         """
         HDUFile = self.get_HDUFile()
+        #print(print(HDUFile))
         cat = self.catalogue.get_source_cat(HDUFile)
         return cat
 

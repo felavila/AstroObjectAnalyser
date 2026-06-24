@@ -128,4 +128,6 @@ class Catalogue(object):
             if (xc-numPix > 0) and (xc+numPix < nx) and (yc-numPix > 0) and (yc+numPix < ny):
                 cutout = image[int(xc-numPix):int(xc+numPix+1), int(yc-numPix):int(yc+numPix+1)]
                 list.append(cutout)
+            else:
+                print(i,"dosent work")
         return list

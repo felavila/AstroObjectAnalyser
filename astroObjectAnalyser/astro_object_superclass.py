@@ -88,6 +88,8 @@ class StrongLensSystem(object):
             ra_cutout_cent = self.ra_cutout_cent
         if dec_cutout_cent is None and hasattr(self, "dec_cutout_cent"):
             dec_cutout_cent = self.dec_cutout_cent
+        
+        
         imagedata = StrongLensImageData(local_filename=local_filename, local_psf_filename=local_psf_filename,
                                         local_wht_filename=local_wht_filename, ra=ra, dec=dec,
                                         ra_cutout_cent=ra_cutout_cent, dec_cutout_cent=dec_cutout_cent,
@@ -536,4 +538,5 @@ class StrongLensSystem(object):
                 angle_dec = Angle(imPos[i, 1], unit=u.degree)
                 self.image_pos_ra[i] = (ra_cent - angle_ra.degree)/arcsec*np.cos(angle_dec)
                 self.image_pos_dec[i] = (dec_cent - angle_dec.degree)/arcsec
+
 
