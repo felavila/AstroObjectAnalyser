@@ -16,5 +16,5 @@ requeriments (found so far)
 * https://sextractor.readthedocs.io/en/latest/Installing.html (brew install sextractor)
 * https://github.com/sibirrer/pyextractor
 * https://github.com/sibirrer/astrofunc
-* https://github.com/cosmo-ethz/CosmoHammer
+* https://github.com/felavila/CosmoHammer (https://github.com/cosmo-ethz/CosmoHammer)
 
