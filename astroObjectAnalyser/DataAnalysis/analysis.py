@@ -67,16 +67,21 @@ class Analysis(Catalogue):
                 if verbose is True:
                     print('=== object ===', i, center_x, center_y)
                     import matplotlib.pylab as plt
-                    fig, ax1 = plt.subplots()
-                    im = ax1.matshow(np.log10(sym_shifted), origin='lower', vmax=vmax, vmin=vmin)
-
+                    from astropy.visualization import simple_norm
+                    fig, (ax1, ax2) = plt.subplots(1, 2,figsize=(12, 5),constrained_layout=True)
+                    im1= ax1.matshow(np.log10(sym_shifted), origin='lower', vmax=vmax, vmin=vmin)
+                    
+                    #norm = ImageNormalize(np.arccosh(star_imgs[i]), stretch=LogStretch())
+                    norm = simple_norm(star_list[i], stretch="log", percent=99)
+                    im2 = ax2.imshow(star_list[i], norm=norm, cmap='viridis', origin='lower')
                     #v_max = np.max(np.nan_to_num(np.log10(sym_shifted)))
                     #v_min = np.min(np.nan_to_num(np.log10(sym_shifted)))
 
                     #v_min = max(v_max-5, v_min)
                     #im = ax1.matshow(np.log10(sym_shifted), origin='lower',vmin=v_min, vmax=v_max)
                     plt.axes(ax1)
-                    fig.colorbar(im)
+                    fig.colorbar(im1, ax=ax1)
+                    fig.colorbar(im2, ax=ax2)
                     plt.show()
 
         combined = sum(shifteds)
