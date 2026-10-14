@@ -15,6 +15,13 @@ requeriments (found so far)
 --------
 * https://sextractor.readthedocs.io/en/latest/Installing.html (brew install sextractor)
 * https://github.com/sibirrer/pyextractor
-* https://github.com/sibirrer/astrofunc
+* https://github.com/felavila/astrofunc (https://github.com/sibirrer/astrofunc) 
 * https://github.com/felavila/CosmoHammer (https://github.com/cosmo-ethz/CosmoHammer)
 
+
+Installing 
+--------
+For installing each of the packages use the git repository.
+::
+
+    pip install git+https://github.com/USERNAME/REPOSITORY.git
